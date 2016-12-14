@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>KML Peru</title>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+    </style>
+    <script src="js/kmlMapParser.js"></script>  
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+
+		// function initMap() {
+		//   var map = new google.maps.Map(document.getElementById('map'), {
+		//     zoom: 6,
+		//     center: {lat: -10.812013, lng: -75.967858},
+		//   });
+
+		//   var xml = new KmlMapParser({ map: map,
+		//                                  kml: 'kml/peru_demo.kml',
+		//                       });
+		// }
+
+		function initMap() {
+		  var map = new google.maps.Map(document.getElementById('map'), {
+		      zoom: 8,
+		      center: {lat: -10.812013, lng: -75.967858},
+		    }),
+		    //myMapsId = '16zQ51LGxPpsecmseNtpe5ui51ZM';
+		    myMapsId = '1u_Yks7MejdJgPd6V70S9xONz9vA';
+		  new google.maps
+		    .KmlLayer({
+		      map: map,
+		      url: 'https://www.google.com/maps/d/kml?mid=' + myMapsId
+		    });
+		}
+		//google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCL-YzOG4cSALFgMipEMEUTAT9M7KJxf8c&callback=initMap">
+    </script>
+  </body>
+</html>
