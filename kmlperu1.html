@@ -43,6 +43,10 @@
 		      map: map,
 		      url: 'https://www.google.com/maps/d/kml?mid=' + myMapsId
 		    });
+
+		    google.maps.event.addDomListener(map, 'click', function() {
+		        window.alert('Hiciste click!');
+		    });
 		}
 		//google.maps.event.addDomListener(window, 'load', initialize);
 
