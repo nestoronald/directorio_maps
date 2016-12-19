@@ -6,18 +6,19 @@
     <title>KML Peru</title>
     <style>
       html, body {
-        height: 100%;
+        height: 80%;
         margin: 0;
         padding: 0;
       }
       #map {
-        height: 100%;
+        height: 80%;
       }
     </style>
     <script src="js/kmlMapParser.js"></script>  
   </head>
   <body>
     <div id="map"></div>
+    <div class="content">sdfsdf</div>
     <script>
 
 		// function initMap() {
@@ -38,17 +39,28 @@
 		    }),
 		    //myMapsId = '16zQ51LGxPpsecmseNtpe5ui51ZM';
 		    myMapsId = '1u_Yks7MejdJgPd6V70S9xONz9vA';
-		  new google.maps
+		  var ctaLayer = new google.maps
 		    .KmlLayer({
 		      map: map,
 		      url: 'https://www.google.com/maps/d/kml?mid=' + myMapsId
 		    });
-
-		    google.maps.event.addDomListener(map, 'click', function() {
-		        window.alert('Hiciste click!');
+		    //ctaLayer.setMap(map);
+		    google.maps.event.addListener(ctaLayer, 'click', function(kmlEvent) {
+		        var text = kmlEvent.featureData.description;
+		        //alert(text);
+		        //document.getElementById('content').value="text";
 		    });
+		    document.getElementById('content').innerHTML="text";
+		    //https://www.google.com.pe/search?sourceid=chrome-psyapi2&ion=1&espv=2&ie=UTF-8&q=kml%20onclick%20event&oq=kml%20event%20clik%20&aqs=chrome.1.69i57j0l5.16271j0j7
+		    //http://stackoverflow.com/questions/6070837/adding-click-event-to-kmllayer-placemarks-and-markers
+
+
+		    // google.maps.event.addDomListener(map, 'click', function() {
+		    //     window.alert('Hiciste click!');
+		    // });
 		}
 		//google.maps.event.addDomListener(window, 'load', initialize);
+		
 
     </script>
     <script async defer
