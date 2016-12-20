@@ -1,0 +1,34 @@
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+  <name>Cines Perú</name>
+  <Placemark>
+    <name>Cine Star</name>
+    <ExtendedData>
+      <Data name="hole Number">
+        <value>hola</value>
+      </Data>
+      <Data name="holeYardage">
+        <value>hola1</value>
+      </Data>
+      <Data name="holePar">
+        <value>hola2</value>
+      </Data>
+    </ExtendedData>
+    <Point>
+      <coordinates>-75.2359912,-9.9702468,0.0</coordinates>
+    </Point>
+ </Placemark> 
+ <Placemark> 
+  <name>Cine Planet</name> 
+  <ExtendedData> 
+    <Data name="holeNumber"> <value>hola</value> </Data> 
+    <Data name="holeYardage"> <value>hola1</value> </Data> 
+    <Data name="holePar"> <value>hola2</value> </Data> 
+  </ExtendedData> 
+  <Point> 
+    <coordinates>-73.8421907,-11.7606171,0.0</coordinates> 
+  </Point>
+ </Placemark> 
+</Document> 
+</kml>
+
