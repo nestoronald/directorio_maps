@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      #google_map {width: 550px; height: 450px;margin-top:50px;margin-left:auto;margin-right:auto;}
+    </style>
+    <script type="text/javascript"
+     src="//maps.googleapis.com/maps/api/js?key=AIzaSyCL-YzOG4cSALFgMipEMEUTAT9M7KJxf8c&sensor=false">
+    </script>
+    <script type="text/javascript">
+
+      var mapCenter = new google.maps.LatLng(54.19265, 16.1779); //Google map Coordinates
+      var map
+      function initialize() //function initializes Google map
+      {
+        var googleMapOptions =
+        {
+            center: mapCenter, // map center
+            zoom: 15, //zoom level, 0 = earth view to higher value
+            panControl: true, //enable pan Control
+            zoomControl: true, //enable zoom control
+            zoomControlOptions: {
+                style: google.maps.ZoomControlStyle.SMALL //zoom control size
+             },
+            scaleControl: true, // enable scale control
+            mapTypeId: google.maps.MapTypeId.ROADMAP // google map type
+        };
+        map = new google.maps.Map(document.getElementById("google_map"), googleMapOptions);
+      }
+
+        function addMyMarker() { //function that will add markers on button click
+            var marker = new google.maps.Marker({
+                position:mapCenter,
+                map: map,
+                  draggable:true,
+                  animation: google.maps.Animation.DROP,
+                title:"This a new marker!",
+              icon: "http://maps.google.com/mapfiles/ms/micons/blue.png"
+            });
+        }
+    </script>
+  </head>
+
+  <body onLoad="initialize()">
+    <div id="google_map" ></div><button id="drop" onClick="addMyMarker()">Drop Markers</button>
+  </body>
+</html>

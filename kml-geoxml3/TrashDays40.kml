@@ -1,0 +1,447 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+  <Document>
+    <Style
+      id="Style1">
+      <LineStyle>
+        <color>66000001</color>
+        <width>1</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>66ff6633</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <Placemark
+      id="ID_00001">
+      <name>Monday</name>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+      <head>
+
+      <META http-equiv="Content-Type" content="text/html">
+
+      <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+      </head>
+
+      <body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+      <table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+      <tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+      <td>08</td>
+
+      </tr>
+
+      <tr>
+
+      <td>
+
+      <table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+      <tr>
+
+      <td>IDDPTO</td>
+
+      <td>08</td>
+
+      </tr>
+
+      <tr bgcolor="#D4E4F3">
+
+      <td>NOMBDEP</td>
+
+      <td>CUSCO</td>
+
+      </tr>
+
+      <tr>
+
+      <td>IDPROV</td>
+
+      <td>0808</td>
+
+      </tr>
+
+      <tr bgcolor="#D4E4F3">
+
+      <td>NOMBPROV</td>
+
+      <td>ESPINAR</td>
+
+      </tr>
+
+      <tr>
+
+      <td>IDDIST</td>
+
+      <td>080805</td>
+
+      </tr>
+
+      <tr bgcolor="#D4E4F3">
+
+      <td>NOMBDIST</td>
+
+      <td>PALLPATA</td>
+
+      </tr>
+
+      <tr>
+
+      <td>N_Riesgo</td>
+
+      <td>A</td>
+
+      </tr>
+
+      <tr bgcolor="#D4E4F3">
+
+      <td>ORIG_FID</td>
+
+      <td>0</td>
+
+      </tr>
+
+      <tr>
+
+      <td>MaxSimpTol</td>
+
+      <td>0.02698</td>
+
+      </tr>
+
+      <tr bgcolor="#D4E4F3">
+
+      <td>MinSimpTol</td>
+
+      <td>0.02698</td>
+
+      </tr>
+
+      </table>
+
+      </td>
+
+      </tr>
+
+      </table>
+
+      </body>
+
+      </html>]]></description>
+      <visibility>1</visibility>
+      <open>0</open>
+      <styleUrl>#Style1</styleUrl>
+      <MultiGeometry>
+      <Polygon>
+        <extrude>0</extrude>        
+        <altitudeMode>clampToGround</altitudeMode>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>-116.365673309192,43.6628960911185 -116.365591334179,43.6560111958534 -116.364375539124,43.6559975333512 -116.364402864128,43.6483204644173 -116.359539767727,43.6483955662698 -116.359567092732,43.64422573708 -116.356452545151,43.6442223004997 -116.356329582632,43.6403188481927 -116.355482675135,43.6384234484285 -116.354444492608,43.6376550793648 -116.354198567569,43.6375697515905 -116.354198567569,43.6375560890883 -116.354348855093,43.6375355534256 -116.352818906307,43.6375834140927 -116.349636046216,43.6375697515905 -116.349677033722,43.6339155770838 -116.317438473925,43.6339155770838 -116.314392238855,43.6339600011706 -116.314187301323,43.6484194546938 -116.334391040727,43.6484843306243 -116.33440470323,43.6627594660968 -116.335292598233,43.6629438679665 -116.336767980829,43.6629097536206 -116.359348576516,43.6629985179752 -116.360673587769,43.6628994438797 -116.365673309192,43.6628960911185</coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+      </MultiGeometry>
+    </Placemark>
+    <Style
+      id="Style2">
+      <LineStyle>
+        <color>66333333</color>
+        <width>1</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>66ff6633</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <Placemark
+      id="ID_00002">
+      <name>Monday</name>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+      <head>
+
+      <META http-equiv="Content-Type" content="text/html">
+
+      <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+      </head>
+
+      <body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+      <table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+      <tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+      <td>08</td>
+
+      </tr>
+
+      <tr>
+
+      <td>
+
+      <table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+      <tr>
+
+      <td>IDDPTO</td>
+
+      <td>08</td>
+
+      </tr>
+
+      <tr bgcolor="#D4E4F3">
+
+      <td>NOMBDEP</td>
+
+      <td>CUSCO</td>
+
+      </tr>
+
+      <tr>
+
+      <td>IDPROV</td>
+
+      <td>0808</td>
+
+      </tr>
+
+      <tr bgcolor="#D4E4F3">
+
+      <td>NOMBPROV</td>
+
+      <td>ESPINAR</td>
+
+      </tr>
+
+      <tr>
+
+      <td>IDDIST</td>
+
+      <td>080805</td>
+
+      </tr>
+
+      <tr bgcolor="#D4E4F3">
+
+      <td>NOMBDIST</td>
+
+      <td>PALLPATA</td>
+
+      </tr>
+
+      <tr>
+
+      <td>N_Riesgo</td>
+
+      <td>A</td>
+
+      </tr>
+
+      <tr bgcolor="#D4E4F3">
+
+      <td>ORIG_FID</td>
+
+      <td>0</td>
+
+      </tr>
+
+      <tr>
+
+      <td>MaxSimpTol</td>
+
+      <td>0.02698</td>
+
+      </tr>
+
+      <tr bgcolor="#D4E4F3">
+
+      <td>MinSimpTol</td>
+
+      <td>0.02698</td>
+
+      </tr>
+
+      </table>
+
+      </td>
+
+      </tr>
+
+      </table>
+
+      </body>
+
+      </html>]]></description>
+      <visibility>1</visibility>
+      <open>0</open>
+      <styleUrl>#Style2</styleUrl>
+      <MultiGeometry>
+      <Polygon>
+        <extrude>0</extrude>        
+        <altitudeMode>clampToGround</altitudeMode>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>-116.334445690736,43.6628618929535 -116.32812095806,43.66215496324 -116.317178970203,43.660553265363 -116.313955122605,43.6598464194685 -116.308176806197,43.6583130341023 -116.308081168681,43.6581319849938 -116.307657714933,43.6579339206219 -116.306523894891,43.6576641071588 -116.305909166113,43.6570664774626 -116.304734358564,43.656485946849 -116.303381938487,43.6562434583902 -116.302043264732,43.6561204958707 -116.301428535953,43.6558336671442 -116.299311183393,43.6551437526941 -116.296688402072,43.6544778104872 -116.293956320733,43.6537709645927 -116.290732473135,43.65294450894 -116.28858779557,43.6525653954595 -116.288218991831,43.6515476647764 -116.287727141753,43.6509022582322 -116.287850104272,43.6503899563104 -116.287385663018,43.6502534151077 -116.286798259243,43.6502534151077 -116.286306492984,43.6503011919558 -116.286060651764,43.6502534151077 -116.285268310457,43.6495874729007 -116.284462390468,43.6490307468921 -116.283888649195,43.6487678065896 -116.282891370356,43.6485219653696 -116.282440591604,43.6481872759759 -116.282003475353,43.6479652393609 -116.281607346609,43.6478559393436 -116.280965292826,43.647545222193 -116.280282251537,43.6470124684274 -116.279421681538,43.6468075308949 -116.278069261461,43.6463636253029 -116.278110248968,43.6455029714853 -116.277796095237,43.6438979208469 -116.277454616502,43.6438773851842 -116.276935441419,43.643583683297 -116.274107806385,43.6425181757659 -116.27408048138,43.6435665842146 -116.269954992458,43.6426548007876 -116.268575331196,43.6423645354807 -116.267537148669,43.6415858566761 -116.266649253666,43.6408754903823 -116.26673114486,43.6393182165921 -116.26673114486,43.6386693734676 -116.266772132367,43.6380751803517 -116.26660826616,43.6374092381448 -116.266403328627,43.6371394246817 -116.265679299831,43.6366783361882 -116.262223273516,43.6355821508914 -116.260679662228,43.6353123374283 -116.260105920956,43.6348683480173 -116.259737033397,43.6343834549189 -116.259395554662,43.6338677164167 -116.274176118895,43.6339872423559 -116.274230768904,43.6339872423559 -116.314405901358,43.6339975520968 -116.314310263842,43.6345678567886 -116.314105410129,43.6484433431178 -116.334363715723,43.6485424172133 -116.334445690736,43.6628618929535</coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </MultiGeometry>
+    </Placemark>
+    <Style
+      id="Style3">
+      <LineStyle>
+        <color>66000001</color>
+        <width>1</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>66ff6633</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <Placemark
+      id="ID_00003">
+      <name>Monday</name>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+      <head>
+
+      <META http-equiv="Content-Type" content="text/html">
+
+      <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+      </head>
+
+      <body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+      <table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+      <tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+      <td>08</td>
+
+      </tr>
+
+      <tr>
+
+      <td>
+
+      <table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+      <tr>
+
+      <td>IDDPTO</td>
+
+      <td>08</td>
+
+      </tr>
+
+      <tr bgcolor="#D4E4F3">
+
+      <td>NOMBDEP</td>
+
+      <td>CUSCO</td>
+
+      </tr>
+
+      <tr>
+
+      <td>IDPROV</td>
+
+      <td>0808</td>
+
+      </tr>
+
+      <tr bgcolor="#D4E4F3">
+
+      <td>NOMBPROV</td>
+
+      <td>ESPINAR</td>
+
+      </tr>
+
+      <tr>
+
+      <td>IDDIST</td>
+
+      <td>080805</td>
+
+      </tr>
+
+      <tr bgcolor="#D4E4F3">
+
+      <td>NOMBDIST</td>
+
+      <td>PALLPATA</td>
+
+      </tr>
+
+      <tr>
+
+      <td>N_Riesgo</td>
+
+      <td>A</td>
+
+      </tr>
+
+      <tr bgcolor="#D4E4F3">
+
+      <td>ORIG_FID</td>
+
+      <td>0</td>
+
+      </tr>
+
+      <tr>
+
+      <td>MaxSimpTol</td>
+
+      <td>0.02698</td>
+
+      </tr>
+
+      <tr bgcolor="#D4E4F3">
+
+      <td>MinSimpTol</td>
+
+      <td>0.02698</td>
+
+      </tr>
+
+      </table>
+
+      </td>
+
+      </tr>
+
+      </table>
+
+      </body>
+
+      </html>]]></description>
+      <visibility>1</visibility>
+      <open>0</open>
+      <styleUrl>#Style3</styleUrl>
+      <MultiGeometry>
+      <Polygon>
+        <extrude>0</extrude>        
+        <altitudeMode>clampToGround</altitudeMode>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>-116.263561947271,43.6264911387116 -116.26361659728,43.62399475649 -116.26361659728,43.6225842498243 -116.263575609773,43.6191384494305 -116.263329768553,43.6191725637764 -116.247784271836,43.6190599109977 -116.237648203969,43.6189881619066 -116.238317582756,43.618875509128 -116.240735510364,43.6183085571975 -116.243426604196,43.6182812321931 -116.243399279192,43.6152282077819 -116.253562588245,43.6151735577732 -116.253507938236,43.611652571708 -116.230162326247,43.6115876957774 -116.228304561228,43.6116013582796 -116.228236248717,43.6128239426762 -116.228837314993,43.6135206464678 -116.229342743754,43.6143983155489 -116.230367263779,43.6157950758934 -116.230913680047,43.6165327671915 -116.230913680047,43.6165634449571 -116.235325997695,43.6181822419167 -116.237661866471,43.6189506109804 -116.237252075225,43.6192818637937 -116.239984156564,43.6204566713423 -116.242156159133,43.6206718347967 -116.243891045451,43.6209655366838 -116.244642315432,43.6212626751512 -116.245257044211,43.6215187422931 -116.245912760496,43.6225091479719 -116.246418189257,43.6229087132961 -116.247784271836,43.6242679227144 -116.247729621828,43.6243772227317 -116.248644841835,43.6252583283931 -116.250065490603,43.6261359974742 -116.251732064411,43.627010229975 -116.252715596929,43.6275805346668 -116.253029834479,43.6276112962514 -116.253207447007,43.6276112962514 -116.253207447007,43.626320399344 -116.257414827123,43.6263955011964 -116.260747974738,43.6263579502702 -116.261280728504,43.6264980118722 -116.261348957196,43.6265184637159 -116.263507297263,43.6264570243657 -116.263561947271,43.6264911387116</coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </MultiGeometry>
+    </Placemark>   
+    
+  </Document>
+</kml>

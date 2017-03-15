@@ -26,12 +26,13 @@ function initMap() {
     zoom: 4,
     center: myLatlng
   });
-
+  var icon0 = "img/iconA.png";
+  var icon1 = "img/iconB.png";
   var marker = new google.maps.Marker({
     position: myLatlng,
     map: map,
     title: 'Click para acercar'
-  });
+  });  
 
   map.addListener('center_changed', function() {
     // 3 seconds after the center of the map has changed, pan back to the
@@ -45,10 +46,25 @@ function initMap() {
     map.setZoom(8);
     map.setCenter(marker.getPosition());
   });
+
+  var contentString = "My punto de concentracion" 
+  infoWnd = new google.maps.InfoWindow({
+      content: contentString
+    }); 
+
+  marker.addListener('mouseover', function() {         
+    infoWnd.open(map, marker);
+    marker.setIcon(icon0);
+    //alert("hola mundo")
+  });
+
+  google.maps.event.addListener(marker, 'mouseout', function() {
+    infoWnd.close();  
+  });
 }
 
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCL-YzOG4cSALFgMipEMEUTAT9M7KJxf8c&callback=initMap" async defer>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZP6RL5Q7xcy8o9gO_V3AS3UblNfTRpV0&callback=initMap" async defer>
     </script>
   </body>
 </html>
