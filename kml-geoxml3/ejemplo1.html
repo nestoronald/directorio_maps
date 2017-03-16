@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         
         <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-        <title>Reading KML Files with Google Maps JavaScript API Version 3</title>
+        <title>Ejemplo GeoXML con Gogle maps (mouseover)</title>
         <link rel="stylesheet" type="text/css" href="./kml-api3/style.css">
         <script async="" src="./kml-api3/analytics.js"></script><script type="text/javascript" src="./kml-api3/google.js">
         </script>
@@ -38,18 +38,7 @@ var geocoder = new google.maps.Geocoder();
     }
     return urlValue;
   }
-
-      // ========== This function will create the "link to this page"
-      function makeLink() {
-//        var a="http://www.geocodezip.com/v3_MW_example_linktothis.html"
-        var url = window.location.pathname;
-        var a = url.substring(url.lastIndexOf('/')+1)
-           + "?lat=" + map.getCenter().lat().toFixed(6)
-           + "&lng=" + map.getCenter().lng().toFixed(6)
-           + "&zoom=" + map.getZoom();
-        if (filename != "er_cusco_1.kml") a += "&filename="+filename;
-        document.getElementById("link").innerHTML = '<a href="' +a+ '">Link to this page<\/a>';
-      }
+      
     function initialize() 
     {
       myLatLng = new google.maps.LatLng(37.422104808,-122.0838851);
@@ -59,86 +48,30 @@ var geocoder = new google.maps.Geocoder();
       var lng = -122.0838851;
       var zoom = 18;
       var maptype = google.maps.MapTypeId.HYBRID;
-
-      // If there are any parameters at eh end of the URL, they will be in  location.search
-      // looking something like  "?marker=3"
- 
-      // skip the first character, we are not interested in the "?"
-      var query = location.search.substring(1);
- 
-      // split the rest at each "&" character to give a list of  "argname=value"  pairs
-      var pairs = query.split("&");
-      for (var i=0; i<pairs.length; i++) {
-        // break each pair at the first "=" to obtain the argname and value
-	    var pos = pairs[i].indexOf("=");
-	    var argname = pairs[i].substring(0,pos).toLowerCase();
-	    var value = pairs[i].substring(pos+1).toLowerCase();
- 
-        // process each possible argname  -  use unescape() if theres any chance of spaces
-        //unespace: Codificar y decodificar una cadena:
-        if (argname == "id") {id = unescape(value);}
-        if (argname == "filename") {
-          filename = unescape(pairs[i].substring(pos+1)); // was value
-          if (filename.indexOf(",") > 0) {
-            filename = filename.split(",");
-          }
-        }
-        if (argname == "marker") {index = parseFloat(value);}
-        if (argname == "lat") {lat = parseFloat(value);}
-        if (argname == "lng") {lng = parseFloat(value);}
-        if (argname == "zoom") {
-	         zoom = parseInt(value);
-	         myGeoXml3Zoom = false;
-	      }
-        if (argname == "type") {
-          if (value == "m") {maptype = google.maps.MapTypeId.ROADMAP;}
-          if (value == "k") {maptype = google.maps.MapTypeId.SATELLITE;}
-          if (value == "h") {maptype = google.maps.MapTypeId.HYBRID;}
-          if (value == "t") {maptype = google.maps.MapTypeId.TERRAIN;}
-        }
-      }
-      if (!isNaN(lat) && !isNaN(lng)) {
-        myLatLng = new google.maps.LatLng(lat, lng);
-      }
       var myOptions = {
                     zoom: zoom,
-                    center: myLatLng,
-                    // zoom: 5,
-                    // center: myLatlng,
+                    center: myLatLng,                    
                     mapTypeId: maptype
       };
       map = new google.maps.Map(document.getElementById("map_canvas"),
             myOptions);
-      infowindow = new google.maps.InfoWindow({});
-      showLoad();
+      infowindow = new google.maps.InfoWindow({});      
       var a = performance.now();
       geoXml = new geoXML3.parser({
                     map: map,
-                    //infoWindow: infowindow,
+                    infoWindow: infowindow,
                     singleInfoWindow: true,
-		                zoom: myGeoXml3Zoom,
-		                markerOptions: {optimized: false},
+		            zoom: myGeoXml3Zoom,
+		            markerOptions: {optimized: true},
                     afterParse: useTheData,
                     failedParse: geoxmlErrorHandler
-                });
-      google.maps.event.addListener(geoXml,'parsed', function() {
-       var b = performance.now();
-       document.getElementById('perf').innerHTML = 'load time ' + ((b - a)/1000).toFixed(2) + ' seconds';
-       hideLoad();
-      });
+                });      
       geoXml.parse(filename);
-		  google.maps.event.addListener(map, "bounds_changed", makeSidebar);
-		  google.maps.event.addListener(map, "center_changed", makeSidebar);
-		  google.maps.event.addListener(map, "zoom_changed", makeSidebar);
-		  google.maps.event.addListenerOnce(map, "idle", makeSidebar);
+		  // google.maps.event.addListener(map, "bounds_changed", makeSidebar);
+		  // google.maps.event.addListener(map, "center_changed", makeSidebar);
+		  // google.maps.event.addListener(map, "zoom_changed", makeSidebar);
+		  // google.maps.event.addListenerOnce(map, "idle", makeSidebar);
       // Make the link the first time when the page opens
-      makeLink();
-
-      // Make the link again whenever the map changes
-      google.maps.event.addListener(map, 'maptypeid_changed', makeLink);
-      google.maps.event.addListener(map, 'center_changed', makeLink);
-      google.maps.event.addListener(map, 'bounds_changed', makeLink);
-      google.maps.event.addListener(map, 'zoom_changed', makeLink);
     };
 
 function kmlPgClick(pm) {
@@ -347,19 +280,7 @@ function useTheData(doc){
   sidebarHtml += "</table>";
   document.getElementById("sidebar").innerHTML = sidebarHtml;
 };
-            
-
-   // function hide_kml(){
-
-   //          geoXml.hideDocument();  
-
-   // }
-
-   // function unhide_kml(){
-
-   //          geoXml.showDocument();  
-
-   // }
+      
 function reload_kml(){
    geoXml.hideDocument();
    delete geoXml;
@@ -371,17 +292,7 @@ function reload_kml(){
    geoXml.parse(filename); 
 
 }
-   // function hide_markers_kml(){
-   //   for (var i=0;i<geoXmlDoc.markers.length;i++) {
-   //     geoXmlDoc.markers[i].setVisible(false);
-   //   }
-   // }
-
-   // function unhide_markers_kml(){
-   //   for (var i=0;i<geoXmlDoc.markers.length;i++) {
-   //     geoXmlDoc.markers[i].setVisible(true);
-   //   }
-   // }
+  
    function hide_polys_kml(){
      for (var i=0;i<geoXmlDoc.gpolylines.length;i++) {
        geoXmlDoc.gpolylines[i].setMap(null);
@@ -393,95 +304,19 @@ function reload_kml(){
        geoXmlDoc.gpolylines[i].setMap(map);
      }
    }
-   // function load_kmlLayer() {
-   //   kmlLayer = new google.maps.KmlLayer(filename,{preserveViewport:!myGeoXml3Zoom});
-   //   google.maps.event.addListener(kmlLayer, "status_changed", function() {
-   //     document.getElementById('kmlstatus').innerHTML = "Kml Status:"+kmlLayer.getStatus();
-   //   });
-   //   kmlLayer.setMap(map);
-   // }
-   // function hide_kmlLayer() {
-   //   kmlLayer.setMap(null);
-   // }
-   // function show_kmlLayer() {
-   //   kmlLayer.setMap(map);
-   // }
-
-// A function to hide the loading message
-function hideLoad()
-{
-   var loaddiv = document.getElementById("loaddiv");
-   if (loaddiv == null)
-   {
-      alert("Sorry can't find the loaddiv");
-      return;
-   }
-   //div found
-   loaddiv.style.visibility="hidden";
-}
-
-// A function to hide the loading message
-function showLoad()
-{
-   var loaddiv = document.getElementById("loaddiv");
-   if (loaddiv == null)
-   {
-      alert("Sorry can't find your loaddiv");
-      return;
-   }
-   //div found
-   loaddiv.style.visibility="visible";
-}
+   
 function showParseError()
-{
-   var loaddiv = document.getElementById("loaddiv");
-   if (loaddiv == null)
-   {
-      alert("Sorry can't find your loaddiv");
-      return;
-   }
-   //div found
-   loaddiv.style.visibility="visible";
-   loaddiv.innerHTML = "<b>XML parse error</b>";
+{   
+   alert("Error al parsear el XML")
 }
-// function codeAddress() {
-//   var address = document.getElementById('address').value;
-//   geocoder.geocode( { 'address': address}, function(results, status) {
-//     if (status == google.maps.GeocoderStatus.OK) {
-//       var marker = new google.maps.Marker({
-//           map: map,
-//           position: results[0].geometry.location
-//       });
-//       if (results[0].geometry.viewport)
-//         map.fitBounds(results[0].geometry.viewport);
-//       else if (results[0].geometry.bounds)
-//         map.fitBounds(results[0].geometry.bounds);
-//       else
-//         map.setCenter(results[0].geometry.location);
 
-//     } else {
-//       alert('Geocode was not successful for the following reason: ' + status);
-//     }
-//   });
-//}
-//]]>
         </script><script type="text/javascript" charset="UTF-8" src="./kml-api3/common.js."></script><script type="text/javascript" charset="UTF-8" src="./kml-api3/util.js"></script><script type="text/javascript" charset="UTF-8" src="./kml-api3/geocoder.js"></script>
     <script type="text/javascript" charset="UTF-8" src="./kml-api3/map.js"></script><script type="text/javascript" charset="UTF-8" src="./kml-api3/geometry.js"></script><script type="text/javascript" charset="UTF-8" src="./kml-api3/poly.js"></script><script type="text/javascript" charset="UTF-8" src="./kml-api3/infowindow.js"></script><script type="text/javascript" charset="UTF-8" src="./kml-api3/stats.js"></script></head>
 <body onload="initialize()">
         <h4>Reading a <a href="http://code.google.com/intl/it-IT/apis/kml/documentation/">KML</a> file with Google Maps JavaScript API <a href="http://code.google.com/intl/it-IT/apis/maps/documentation/v3/">Version 3</a> and <a href="http://code.google.com/p/geoxml3/">geoxml3</a>.</h4>
 <div>
-<!--  <button onclick="hide_polys_kml();">hide polylines</button>
-  <button onclick="unhide_polys_kml();">unhide polylines</button> -->
- <!--  <button onclick="hide_kml();">hide</button>
-  <button onclick="unhide_kml();">unhide</button>
-  <button onclick="hide_markers_kml();">hide markers</button>
-  <button onclick="unhide_markers_kml();">show markers</button>
-  <button onclick="load_kmlLayer();">load kmlLayer</button>
-  <button onclick="hide_kmlLayer();">hide kmlLayer</button>
-  <button onclick="show_kmlLayer();">show kmlLayer</button> -->
-<!--  <button onclick="reload_kml();">reload</button> -->
+
 </div>
-<div id="loaddiv" style="visibility: hidden;">Loading.....&nbsp;&nbsp;&nbsp; please wait!<br></div>
 <table style="width:100%;"><tbody><tr style="width:100%;"><td style="width:100%;">
         <div id="map_canvas"><div style="height: 100%; width: 100%;"></div></div>
 </td><td>
